@@ -1,0 +1,175 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary-text: #212121;
+  --color-secondary-text: #757575;
+  --color-accent: #2196f3;
+  --color-contact-footer: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-primary-text);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
+/* Шапка сайта */
+
+.logo {
+  color: var(--color-black);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.menu,
+.contacts {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.contacts {
+  color: var(--color-secondary-text);
+}
+
+header .link:hover,
+header .link:focus,
+.current {
+  color: var(--color-accent);
+}
+
+/* Main Студия*/
+
+.hero {
+  background-color: #2f303a;
+}
+
+.hero-title {
+  color: var(--color-white);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero button {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.hero button:hover {
+  cursor: pointer;
+}
+
+.feature-title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.feature-discription {
+  color: var(--color-secondary-text);
+  line-height: 1.71;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-title {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.team-discription {
+  color: var(--color-secondary-text);
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Main Портфолио */
+
+.portfolio button {
+  background-color: #f5f4fa;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: inherit;
+}
+
+.portfolio button:hover,
+.portfolio button:focus {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-description {
+  color: var(--color-secondary-text);
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+/* Подвал */
+
+footer {
+  background-color: #2f303a;
+}
+
+footer .logo {
+  color: var(--color-white);
+}
+
+.logo span {
+  color: var(--color-accent);
+}
+
+footer address {
+  color: var(--color-white);
+  line-height: 1.71;
+}
+
+footer .contacts {
+  color: var(--color-contact-footer);
+  line-height: 1.71;
+}
+
+footer .link:hover,
+footer .link:focus {
+  color: var(--color-accent);
+}
