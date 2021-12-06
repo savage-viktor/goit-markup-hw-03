@@ -25,9 +25,57 @@ a {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* Шапка сайта */
 
+header .container {
+  display: flex;
+  align-items: center;
+
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+}
+
+header .link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.site-nav {
+  display: flex;
+}
+
 .logo {
+  margin-right: 93px;
+
   color: var(--color-black);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -35,12 +83,21 @@ a {
 }
 
 .menu,
-.contacts {
+.contacts-header {
+  display: flex;
+  align-items: center;
+
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-.contacts {
+.menu li:not(:last-child),
+.contacts-header li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-header {
+  margin-left: auto;
   color: var(--color-secondary-text);
 }
 
@@ -56,7 +113,17 @@ header .link:focus,
   background-color: #2f303a;
 }
 
+.section.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 696px;
+
   color: var(--color-white);
   font-weight: 900;
   font-size: 44px;
@@ -67,6 +134,14 @@ header .link:focus,
 }
 
 .hero button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+  border-color: var(--color-accent);
+  border-radius: 4px;
+  border-style: none;
+  min-width: 200px;
+
   color: var(--color-white);
   background-color: var(--color-accent);
   font-family: inherit;
@@ -81,7 +156,22 @@ header .link:focus,
   cursor: pointer;
 }
 
+.feature {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: calc((100% - 90px) / 4);
+}
+
+.feature-card:not(:last-child) {
+  margin-right: 30px;
+}
+
 .feature-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -92,16 +182,56 @@ header .link:focus,
 }
 
 .section-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   text-align: center;
+}
+
+.wedo {
+  padding-top: 0px;
+}
+
+.wedo .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wedo .list li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team {
   background-color: #f5f4fa;
 }
 
+.list.team {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-team:not(:last-child) {
+  margin-right: 30px;
+}
+
+.card-team {
+  width: calc((100% - 90px) / 4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
+
+  background-color: var(--color-white);
+}
+
+.team-photo {
+  margin-bottom: 30px;
+}
+
 .team-title {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -114,8 +244,23 @@ header .link:focus,
 }
 
 /* Main Портфолио */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.buttons li:not(:last-child) {
+  margin-right: 8px;
+}
 
 .portfolio button {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border-style: none;
+
   background-color: #f5f4fa;
   font-family: inherit;
   font-weight: 500;
@@ -132,7 +277,36 @@ header .link:focus,
   cursor: pointer;
 }
 
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-card {
+  width: calc((100% - 60px) / 3);
+
+  margin-bottom: 30px;
+}
+
+.portfolio-card:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.portfolio-card:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
+.portfolio-text {
+  padding: 20px 24px;
+
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
 .portfolio-title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -148,10 +322,15 @@ header .link:focus,
 /* Подвал */
 
 footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2f303a;
 }
 
 footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
   color: var(--color-white);
 }
 
@@ -160,13 +339,22 @@ footer .logo {
 }
 
 footer address {
+  margin-bottom: 10px;
+
+  font-style: normal;
   color: var(--color-white);
   line-height: 1.71;
 }
 
-footer .contacts {
+.contacts-footer {
   color: var(--color-contact-footer);
   line-height: 1.71;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.contacts-footer li:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 footer .link:hover,
